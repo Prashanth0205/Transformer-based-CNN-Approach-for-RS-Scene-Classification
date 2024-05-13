@@ -13,8 +13,8 @@ Keywords: Convolutional Neural Networks; Remote Sensing; Scene Classification; f
 ###    4) RSI-CB256             : https://github.com/lehaifeng/RSI-CB
 ###    5) MLRSNet               : https://data.mendeley.com/datasets/7j9bv9vwsx/2
 ### {PreTrained Weights of models can be made available on request - Mail to arrun.sivasubramanian@gmail.com} 
-### Please star the repository if you like this work :)
-Experimental Setup: 
+
+## Experimental Setup: 
 
 The pre-trained weights for transfer learning were acquired for PyTorch from the timm module. Finding the optimal learning rate for faster convergence was done using the lr_finder method. Since our work considers a fixed batch size of 8, this method finds the best learning rate by splitting the data into batches and assigning different learning rates to each batch. Then, the learning rate of the batch with a small loss is considered the optimal learning rate. The results were computed using 4 Nvidia RTX5000 GPUs, and the fastai distributed framework helps in parallel computation. The setup has a CPU RAM of 128 GB, GPU RAM of 64 GB, and a 28-core processor. For comparison, we use accuracy (the ratio between correctly classified instances to the total instances present) and the F1 score (the harmonic226 mean between precision and recall) as the evaluation metric since we need to minimize the false positive and the false pessimistic predictions in the confusion matrix. For saving the models, we prioritize minimizing the validation loss. 
 
